@@ -1,0 +1,60 @@
+/* Reset default margin and padding */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the image gallery container */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+    padding: 20px;
+}
+
+/* Style individual image containers */
+.image {
+    width: 80%; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add spacing between images */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Style the images themselves */
+.image img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    display: block; /* Remove any extra spacing below images */
+}
+
+/* Add hover effect for images (optional) */
+.image:hover {
+    transform: scale(1.05); /* Enlarge the image on hover */
+    transition: transform 0.3s ease;
+}
+
+/* Center the images horizontally and vertically (optional) */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Add a caption or description below each image */
+.image-caption {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* Text color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show caption on hover (optional) */
+.image:hover .image-caption {
+    opacity: 1;
+}
